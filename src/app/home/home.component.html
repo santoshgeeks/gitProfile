@@ -1,0 +1,133 @@
+<section class="section-tab">
+    <div class="row m-0 w-100 border-b">
+        <div class="container">
+            <div class="row m-0 w-100 ">
+                <div class="col-md-3"></div>
+                <div class="col-md-5">
+                    <div class="row m-0 w-100">
+                        <a id="overview" class="deactive">
+                            <img src="../../assets/46271.png" alt="">
+                            Overview</a>
+                        <a id="repo" class="deactive">Repositories <span> {{user.public_repos}} </span></a>
+                        <a id="proj" class="deactive">Projects</a>
+                        <a id="pack" class="deactive">Packages</a>
+                    </div>
+                </div>
+                <div class="col-md-5"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-0 w-100">
+        <div class="container">
+            <div class="row m-0 w-100">
+                <div class="col-lg-3">
+                    <div class="avtar">
+                        <img [src]="user.avatar_url" alt="">
+                    </div>
+                    <div class="row m-0 w-100">
+                        <div class="nameAndLogin pt-3">
+                            <h3 class="name"> {{user.name}} </h3>
+                            <p> {{user.login}} </p>
+                        </div>
+                    </div>
+                    <div class="row m-0 w-100">
+                        <h4 class="bio"> {{user.bio}} </h4>
+                    </div>
+                    <div class="row m-0 w-100">
+                        <button class="btn btn-block mb-3 js-profile-editable-edit-button">Edit profile</button>
+                    </div>
+                    <div class="row m-0 w-100">
+                        <p class="f"> <i class="fa fa-users mr-1" aria-hidden="true"></i>{{user.followers}} follower</p>
+                        <p class="ml-2 f"> {{user.following}} following </p>
+                        <p class="ml-2 f"><i class="fa fa-star-o" aria-hidden="true"></i> 1</p>
+                    </div>
+                    <div class="row m-0 w-100">
+                        <div class="details">
+                            <p class="mb-1 f3"><i class="fa fa-building-o mr-1" aria-hidden="true"></i> {{user.company}}
+                            </p>
+                            <p class="mb-1 f3"><i class="fa fa-map-marker mr-2" aria-hidden="true"></i>{{user.location}}
+                            </p>
+                            <p class="mb-1 f3"> <i class="fa fa-envelope-o mr-1"
+                                    aria-hidden="true"></i>santoshrai526@gmail.com</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h5>Highlights</h5>
+                    <p>Arctic Code Vault Contributor</p>
+                    <hr>
+                    <h5>Organizations</h5>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row m-0 w-100">
+                        <div class="col-md-12">
+                            <h2 class="text-normal f2">Popular repositories</h2>
+                        </div>
+                    </div>
+                    <div class="row m-0 w-100">
+                        <div class="col-lg-6"
+                            *ngFor="let repo of repogetory | paginate: { itemsPerPage: 6, currentPage: p }; let i=index">
+                            <div class="repoDetail">
+                                <div class="row m-0 w-100">
+                                    <div class="repoDisc">
+                                        <a> {{repo.name}} </a>
+                                        <p class="pinned-item-desc text-gray text-small d-block mt-2 mb-3"></p>
+                                        <p *ngIf="repo.description =='null'" style="padding-bottom: 20%;"></p>
+                                        <p> {{repo.description}} </p>
+                                        <div class="row m-0 w-100">
+                                        </div>
+                                    </div>
+                                    <div class="row m-0 w-100"
+                                        [ngStyle]="{'padding-top: 35px': repo.description==null}">
+                                        <div class="languageColor"></div>
+                                        <p> {{repo.language}} </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0 w-100">
+                        <div class="col-md-12">
+                            <p class="mt-4 mb-3">25 contributions in the last year</p>
+                            <div class="calender">
+                                <p class="text-center">Did not found calender like github calender</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0 w-100">
+                        <div class="col-md-10 contry">
+                            <h5>Contribution activity</h5>
+                            <div class="row m-0 w-100">
+                                <p>November 2020</p>
+                                <div class="hrLine"></div>
+
+                                <p class="noActivity"> {{user.login}} has no activity yet for this period.</p>
+                            </div>
+                            <div class="row m-0 w-100 mt-5">
+                                <button style="color: #0366d6;"
+                                    class="btn btn-block mb-3 js-profile-editable-edit-button">Show more
+                                    activity</button>
+                            </div>
+                            <div class="row m-0 w-100">
+                                <p class="unexpected mt-4">Seeing something unexpected? Take a look at the <a
+                                        href="https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-your-github-profile">GitHub
+                                        profile guide</a>.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <ul>
+                                <li *ngFor="let year of years; let i=index" [ngClass]="{'first-item': i==0}">
+                                    {{year.name}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0 w-100">
+        <div class="container">
+            <hr class="mb-2">
+        </div>
+    </div>
+</section>

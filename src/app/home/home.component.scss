@@ -1,0 +1,146 @@
+.section-tab {
+    .border-b {
+        border-bottom: 1px solid #d1d5da;
+        a {
+            padding: 25px 30px 10px 0px;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            color: black;
+            img {
+                width: 16px;
+                margin-right: 10px;
+            }
+        }
+        a:hover {
+            border-bottom: 2px solid #d1d5da;
+        }
+        .deactive {
+            span {
+                background: #e9e9e9;
+                padding: 0px 10px 1px 10px;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .avtar {
+        img {
+            width: 260px;
+            height: 260px;
+            border-radius: 150px;
+            margin-top: -30px;
+        }
+    }
+    .f2 {
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+    .bio {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .name {
+        font-size: 26px;
+        line-height: 1.25;
+    }
+    .f:hover {
+        color: #0366d6;
+        cursor: pointer;
+    }
+    .f3 {
+        font-size: 14px;
+    }
+    .repoDetail {
+        border: 1px solid #00000033;
+        border-radius: 10px;
+        padding: 13px;
+        margin-bottom: 20px;
+        min-height: 188px;
+        a {
+            color: #0366d6;
+            cursor: pointer;
+        }
+        p {
+            font-size: 12px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .languageColor {
+            width: 16px;
+            height: 16px;
+            background: #2b7489;
+            border-radius: 26px;
+            margin-right: 7px;
+        }
+    }
+
+    button {
+        border: 1px solid #b0b2ac;
+    }
+    button:hover {
+        background-color: #b0b2ac24;
+    }
+    .contry {
+        h5 {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+        }
+    }
+    .hrLine {
+        border-bottom: 1px solid #00000030;
+        width: 85%;
+        display: inline-block;
+        margin-bottom: 23px;
+        margin-left: 5px;
+    }
+    ul {
+        padding: 0px;
+        li {
+            list-style: none;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .first-item {
+            background: #0366d6;
+            padding: 9px;
+            color: white;
+            border-radius: 6px;
+        }
+    }
+    .noActivity {
+        font-size: 14px;
+        text-align: center;
+        color: #586069;
+        margin: auto;
+        padding-top: 40px;
+    }
+    .calender {
+        height: 200px;
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid #00000029;
+        margin-bottom: 30px;
+        position: relative;
+        .text-center{
+            position: absolute;
+            left: 32%;
+            top: 43%;
+            font-size: 14px;
+        }
+    }
+    .unexpected{
+        font-size: 12px;
+        color: #586069;
+    }
+}
